@@ -1,17 +1,18 @@
 
-import models.Person;
-import models.PersonasGenerator;
+import models.Carro;
+import models.CarrosGenerator;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        PersonasGenerator personaGenerator = new PersonasGenerator();
+        CarrosGenerator generator = new CarrosGenerator();
 
-        // Obtener el arreglo de 50 personas generadas aleatoriamente
-        Person[] personas = personaGenerator.generarPersonas();
+        // Obtener el arreglo de 50 carros generadas aleatoriamente
+        Carro[] carros = generator.generarCarros();
 
-        System.out.println("Listado de personas generadas:");
-        for (Person persona : personas) {
+        System.out.println("Listado de carros generadas:");
+        for (Carro persona : carros) {
             System.out.println(persona);
         }
+
     }
 }
