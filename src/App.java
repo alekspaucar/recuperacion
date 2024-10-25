@@ -10,9 +10,16 @@ public class App {
         Carro[] carros = generator.generarCarros();
 
         System.out.println("Listado de carros generadas:");
-        for (Carro persona : carros) {
-            System.out.println(persona);
-        }
 
+        MetodosOrdenamientoBusquedaGrupoB metodos = new MetodosOrdenamientoBusquedaGrupoB();
+        metodos.sortBYearWithBubbleAvnAsendente(carros);
+        metodos.showCars(carros);
+
+        int result = metodos.searchBinaryByYear(carros, 200);
+        if (result == -1) {
+            System.out.println("No se encontro el carro");
+        } else {
+            System.out.println("El carro se encuentra en la posicion: " + result);
+        }
     }
 }

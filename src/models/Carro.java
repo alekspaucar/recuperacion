@@ -44,4 +44,12 @@ public class Carro {
         this.model = model;
     }
 
+    @Override
+    public String toString() {
+        return "Carro{" +
+                "name='" + name + '\'' +
+                ", model='" + model + '\'' +
+                ", year=" + year +
+                '}';
+    }
 }
